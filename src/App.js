@@ -65,7 +65,7 @@ function App() {
           ) : (
             <div className="default">
               <h2>Welcome to Weather App</h2> <br/>
-              <p>Please enter a location to get the instant weather information.</p>
+              <p>Please enter a location to instantly retrieve weather information.</p>
             </div>
           )}
         </main>
