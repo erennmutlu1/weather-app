@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-
-
 const api = {
   key: "7acdaca20ced5cc82934fd6e6f6b7fd2",
   base: "https://api.openweathermap.org/data/2.5/"
 }
+
 function App() {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
@@ -49,11 +48,14 @@ function App() {
             />
           </div>
           {(typeof weather.main != "undefined") ? (
+            
           <div>
+
             <div className="location-box">
               <div className="location">{weather.name}, {weather.sys.country}</div>
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
+
             <div className="weather-box">
               <div className="temp">
                 {Math.round(weather.main.temp)}°C
@@ -61,6 +63,7 @@ function App() {
                 <div className="weather">{weather.weather[0].description}</div>
               </div>
             </div>
+
           </div>
           ) : (
             <div className="default">
